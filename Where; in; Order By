@@ -1,0 +1,8 @@
+SELECT * 
+FROM DimCustomer
+--WHERE EnglishEducation = 'High School' and EnglishOccupation = 'Manual'
+
+WHERE EnglishEducation IN ('High School','Bachelors','Partial High School')
+AND SpanishOccupation IN ('Administrativo','Profesional')
+
+ORDER BY EnglishEducation 
