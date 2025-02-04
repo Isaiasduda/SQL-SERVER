@@ -1,0 +1,19 @@
+select *
+into temp_test
+from DimEmploeyy
+
+select 
+EmployeeKey,
+FirstName,
+MiddleName,
+LastName,
+StartDate,
+EndDate,
+case when EndDate is null then 'Ativo' else 'Demito' end as 'Status'
+from temp_test
+
+where EmployeeKey in (1,2,3)
+
+update temp_test
+set EndDate =' 2025-11-10'
+where EmployeeKey in (1,2,3)
